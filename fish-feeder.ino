@@ -54,12 +54,8 @@ void loop()
 {
   Feed();
   Serial.print("Feed Count: ");
-  Serial.println(count++);
-  Serial.print("Interval: ");
-  Serial.println(FeedInterval);
-  Serial.print("DAY: ");
-  Serial.println(DAY);
-  Serial.print("Interval: ");
+  Serial.print(count++);
+  Serial.print(" Interval: ");
   Serial.println(FeedInterval);
   delay(FeedInterval);
 }
