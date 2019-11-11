@@ -9,11 +9,11 @@
 
 // Read: http://bit.ly/2kYOFBa
 
-#define MILLISECOND   1
-#define SECOND        MILLISECOND * 1000
-#define MINUTE        60 * SECOND
-#define HOUR          60 * MINUTE
-#define DAY           24 * HOUR
+const int MILLISECOND = 1;
+const int SECOND = MILLISECOND * 1000;
+const int MINUTE = 60 * SECOND;
+const int HOUR = 60 * MINUTE;
+const int DAY = 24 * HOUR;
 
 int enB = 9;          // PWM pin that alters speed
 int in3 = 8;          //                     In3
@@ -26,7 +26,8 @@ int in4 = 7;          //              High       Low
                       
 int FeedSpeed = 200;            // Set speed to 200 out of possible 0~255 range (high)
 int FeedTime = 2 * SECOND;      // With a 4 second interval between feedings, that's 10 feedings per minute for testing
-int FeedInterval = 6 * HOUR;    // Feed every 6 hours
+//12 * HOUR;    // Feed every 12 hours
+long const FeedInterval = 12 * HOUR;    // Feed every 12 hours
 int count = 0;
 
 void setup()
@@ -54,5 +55,11 @@ void loop()
   Feed();
   Serial.print("Feed Count: ");
   Serial.println(count++);
+  Serial.print("Interval: ");
+  Serial.println(FeedInterval);
+  Serial.print("DAY: ");
+  Serial.println(DAY);
+  Serial.print("Interval: ");
+  Serial.println(FeedInterval);
   delay(FeedInterval);
 }
