@@ -27,7 +27,7 @@ int in4 = 7;          //              High       Low
 int FeedSpeed = 200;            // Set speed to 200 out of possible 0~255 range (high)
 int FeedTime = 2 * SECOND;      // With a 4 second interval between feedings, that's 10 feedings per minute for testing
 //12 * HOUR;    // Feed every 12 hours
-long const FeedInterval = 6 * HOUR;    // Feed every 12 hours
+long const FeedInterval = 6 * HOUR;    // Feed every 6 hours
 int count = 0;
 
 void setup()
