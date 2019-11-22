@@ -9,11 +9,11 @@
 
 // Read: http://bit.ly/2kYOFBa
 
-const int MILLISECOND = 1;
-const int SECOND = MILLISECOND * 1000;
-const int MINUTE = 60 * SECOND;
-const int HOUR = 60 * MINUTE;
-const int DAY = 24 * HOUR;
+const long MILLISECOND = 1;
+const long SECOND = MILLISECOND * 1000;
+const long MINUTE = 60 * SECOND;
+const long HOUR = 60 * MINUTE;
+const long DAY = 24 * HOUR;
 
 int enB = 9;          // PWM pin that alters speed
 int in3 = 8;          //                     In3
@@ -27,7 +27,7 @@ int in4 = 7;          //              High       Low
 int FeedSpeed = 200;            // Set speed to 200 out of possible 0~255 range (high)
 int FeedTime = 2 * SECOND;      // With a 4 second interval between feedings, that's 10 feedings per minute for testing
 //12 * HOUR;    // Feed every 12 hours
-long const FeedInterval = 12 * HOUR;    // Feed every 12 hours
+long const FeedInterval = 6 * HOUR;    // Feed every 12 hours
 int count = 0;
 
 void setup()
